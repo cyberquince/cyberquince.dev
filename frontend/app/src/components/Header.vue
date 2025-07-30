@@ -36,7 +36,7 @@
       </div>
       <div class="header_nav-item logo">
         <router-link to="/" class="base_link">
-          <img src="/img/logo.png" class="base_image logo" alt="Logo">
+          <img :src="pathToImage('logo.png')" class="base_image logo" alt="Logo">
         </router-link>
       </div>
       <div class="header_nav-item">
@@ -80,6 +80,10 @@ export default {
     },
     toggleBurger() {
       this.burgerOpened = !this.burgerOpened;
+    },
+    pathToImage(file) {
+      const prefix = process.env === 'production' ? '/cyberquince.dev/' : '/';
+      return `${prefix}img/${file}`;
     },
   },
   mounted() {

@@ -49,7 +49,7 @@
     </div>
     <div class="footer_copy">
       All right reserved.
-      <img src="/img/logo.png" alt="logo">
+      <img :src="pathToImage('logo.png')" alt="logo">
       2025
     </div>
   </footer>
@@ -83,6 +83,10 @@ export default {
       const tailFormatted = tail.length === 4 ? `${tail.slice(0, 2)}-${tail.slice(2)}` : tail;
       const rest = `${main}${main && tailFormatted ? '-' : ''}${tailFormatted}`;
       return `${operator} <span class="aspect">${rest}</span>`;
+    },
+    pathToImage(file) {
+      const prefix = process.env === 'production' ? '/cyberquince.dev/' : '/';
+      return `${prefix}img/${file}`;
     },
   },
 };
