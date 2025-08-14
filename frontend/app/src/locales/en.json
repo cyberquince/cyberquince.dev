@@ -1,5 +1,198 @@
 {
   "navbar": {
-    "home": "Home"
+    "home": "Home",
+    "services": "Services",
+    "blog": "Blog",
+    "contacts": "Contacts"
+  },
+  "footer": {
+    "work_together": "Let's work together",
+    "button_text": "Contact us",
+    "email": "hello@cyberquince.dev",
+    "mobile": {
+      "md": "+37322999999",
+      "ru": "+79999999999"
+    }
+  },
+  "home": {
+    "slogan": "IT Solutions Development",
+    "dev_slogan": "We build custom applications tailored exactly to your requirements, delivering high quality and seamless performance — fast and stress-free.",
+    "button_text": "Choose a Service",
+    "cards": {
+      "ux": {
+        "title": "UX/UI Design",
+        "description": "Craft modern UX/UI designs centered around user behavior, delivering intuitive experiences and a cohesive visual identity for every digital product."
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "description": "Provide end-to-end SEO solutions — from in-depth keyword research and competitor audits to boosting your site’s authority through strategic link building and map listings."
+      },
+      "web": {
+        "title": "Web Development",
+        "description": "Build websites and web applications from the ground up — combining responsive design with robust server-side logic to deliver fast, stable, and scalable solutions for any project.."
+      },
+      "engineer": {
+        "title": "Data Engineering",
+        "description": "We design data architectures — from collection and cleaning to storage and preparation for analytics — providing a reliable foundation for data-driven solutions."
+      }
+    }
+  },
+  "services": {
+    "title": "Choose a Service",
+    "icons": {
+      "web": "Web<br>development",
+      "ux": "UX/UI<br>design",
+      "seo": "SEO<br>optimisation",
+      "engineer": "Data-<br>engineering"
+    },
+    "calc": {}
+  },
+  "contacts": {
+    "title": "Let’s turn your idea into reality",
+    "slogan": "We provide a free consultation, assess your project’s feasibility, and prepare an initial budget estimate",
+    "bullets": [
+      {
+        "index": 1,
+        "title": "Tell us about your project",
+        "description": "Share your project with us, and we’ll be in touch right away"
+      },
+      {
+        "index": 2,
+        "title": "Define your goal",
+        "description": "Share your vision with us — we’ll craft the best solution to achieve it"
+      }, 
+      {
+        "index": 3,
+        "title": "Set your budget",
+        "description": "Based on your budget, we’ll propose the best solution"
+      }
+    ],
+    "form": {
+      "title": "Please fill out the form",
+      "about": "What we need to know",
+      "name": "Name",
+      "attach": "Attach File",
+      "submit": "Submit" 
+    }
+  },
+  "engineer_page": {
+    "title": "Data Engineering",
+    "slogan": "End-to-end data collection, processing, storage, and visualization",
+    "sla": "From Excel to cloud solutions",
+    "cards": {
+      "integration": {
+        "title": "Data Integration",
+        "description": "We integrate your data from various sources into one unified system, streamlining workflows and ensuring data integrity"
+      },
+      "architecture": {
+        "title": "Data Warehouse Architecture",
+        "description": "Build robust, high-performance data warehouses with optimized schemas for fast processing and top-tier security"
+      },
+      "analitics": {
+        "title": "Data Analytics",
+        "description": "We perform deep data analysis and deliver clear reports and interactive dashboards that empower informed decision-making and reveal critical business trends"
+      },
+      "automatization": {
+        "title": "Process Automation",
+        "description": "We streamline business processes through automation, cutting manual work and boosting efficiency"
+      }
+    }
+  },
+  "ux_page": {
+    "title": "UX/UI Design",
+    "slogan": "The Perfect Interface for Your App",
+    "icons": {
+      "determination": "Goal Setting",
+      "development": "Interface Design",
+      "visualize": "Visual Design",
+      "optimazation": "Interface Optimization"
+    },
+    "cards": [
+      {"index": 1, "title": "Business Research", "description": "Immerse ourselves in your company’s unique context, analyze objectives, and understand your audience to build the perfect foundation."},
+      {"index": 2, "title": "Strategy Development", "description": "Craft the interface architecture, identify key elements, and define the overall visual style."},
+      {"index": 3, "title": "Design Creation", "description": "Develop a modern, clean, and responsive interface that perfectly reflects your brand."},
+      {"index": 4, "title": "Implementation & Integration", "description": "Deploy functionality using reliable technologies, adapting the site for any device."},
+      {"index": 5, "title": "Testing & Refinement", "description": "Checking loading speed, navigation logic, and usability, eliminating any shortcomings."},
+      {"index": 6, "title": "Launch & Growth", "description": "After the website launch, collaboration continues with user behavior analysis and regular solution updates."}
+    ]
+  },
+  "seo_page": {
+    "title": "SEO Optimization",
+    "slogan": "Your Website at the Top",
+    "icons": {
+      "audit": "Technical Audit",
+      "semantics": "Keyword Research",
+      "on_page": "On-page Optimization",
+      "optimazation": "Off-page Optimization"
+    },
+    "solutions": {
+      "basic": {
+        "title": "Basic",
+        "options": [
+          { "title": "Technical Audit", "description": "checking robots.txt, sitemap.xml, and basic SEO errors" },
+          { "title": "Keyword Collection & Clustering", "description": "up to 20 keywords" },
+          { "title": "On-page Optimization", "description": "title, meta description, H1 headings, and alt tags for 5 pages." },
+          { "title": "Monthly Monitoring", "description": "google/RU rankings and a brief report" }
+        ]
+      },
+      "pro": {
+        "title": "Advanced",
+        "options": [
+          { "title": "Basic Plan", "description": "All services from the Basic plan" },
+          { "title": "Extended Semantics", "description": "up to 80 queries, divided by sections" },
+          { "title": "Content Strategy", "description": "publications plus 4 SEO texts (1,000–1,500 characters each)" },
+          { "title": "Link building", "description": "5 5 High-quality Backlinks on Authority Platforms" },
+          { "title": "Detailed Analytics", "description": "google Analytics and Search Console setup, plus a monthly report with recommendations" }
+        ]
+      },
+      "corporate": {
+        "title": "Enterprise",
+        "options": [
+          { "title": "Advanced Plan", "description": "All services from the Basic plan" },
+          { "title": "Deep Technical Optimization", "description": "load speed improvement, responsiveness, and microdata markup" },
+          { "title": "Content Marketing", "description": "8 SEO articles plus corporate blog management" },
+          { "title": "Active Link Building", "description": "15 links from industry resources and media outlets" },
+          { "title": "CRO Optimization", "description": "analysis of behavioral metrics and conversion recommendations" },
+          { "title": "Weekly Meetings", "description": "real-time monitoring and reporting" }
+        ]
+      }
+    }
+  },
+  "web_page": {
+    "title": "Web Development",
+    "slogan": "From landing pages to complex B2B systems",
+    "sla": "From technical analysis to ongoing support",
+    "cards": {
+      "adaptive": {
+        "title": "Responsive Design",
+        "description": "Ensures flawless display and usability across all devices and screen sizes, providing a consistent user experience"
+      },
+      "stack": {
+        "title": "Modern Tech Stack",
+        "description": "Utilizes the latest and most reliable technologies to ensure high performance, scalability, and long-term stability of your project"
+      },
+      "api": {
+        "title": "Interface Integration",
+        "description": "Seamlessly connect your interfaces with external services and systems to enhance functionality and user experience"
+      },
+      "speed": {
+        "title": "Performance Optimization",
+        "description": "Improves website speed, responsiveness, and overall efficiency for a smoother user experience and better search rankings"
+      }
+    },
+    "solutions": {
+      "landing": {
+        "title": "Single-page Website",
+        "description": "Creating single-page landing websites that load quickly and work flawlessly on any device. Intuitive design and clear structure help visitors instantly find the information they need and submit inquiries in just a few clicks. Integrated contact forms, galleries, and maps provide convenience and drive higher conversions."
+      },
+      "corporate": {
+        "title": "Corporate Websites",
+        "description": "Developing multi-page corporate websites that enhance your company’s image and strengthen brand recognition. Convenient navigation and a well-structured layout (About Us, Services, Blog, Contact) help visitors quickly find the information they need. Integration of a content management system, news section, and subscription forms allows you to update the site yourself and stay connected with your audience. Optimized for fast loading and flawless display on all devices."
+      },
+      "cart": {
+        "title": "E-commerce Website",
+        "description": "Creating modern online stores with product catalogs and user-friendly filters that help customers quickly find what they need. Designing intuitive shopping cart and checkout interfaces with support for all popular payment and delivery methods. Integrating product and promotion management systems, automating inventory tracking, and enabling real-time price updates. Fully responsive design optimized for fast loading on any device."
+      }
+    }
   }
 }
