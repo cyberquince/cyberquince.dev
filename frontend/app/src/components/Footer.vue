@@ -25,22 +25,22 @@
         </div>
         <div class="footer_right-socials">
           <div class="social_instagram">
-            <a href="//instagram.com/cyberquince.dev" class="base_link">
+            <a href="//instagram.com/cyberquince.dev" class="base_link" target="_blank">
               <i class="cq-icon wh-40 instagram"></i>
             </a>
           </div>
           <div class="social_facebook">
-            <a href="//facebook.com/cyberquince.dev" class="base_link">
+            <a href="//facebook.com/cyberquince.dev" class="base_link" target="_blank">
               <i class="cq-icon wh-40 facebook"></i>
             </a>
           </div>
           <div class="social_telegram">
-            <a href="//t.me/cyberquince.dev" class="base_link">
+            <a href="//t.me/cyberquince.dev" class="base_link" target="_blank">
               <i class="cq-icon wh-40 telegram"></i>
             </a>
           </div>
           <div class="social_vk aspect">
-            <a href="//vk.com/cyberquince.dev" class="base_link">
+            <a href="//vk.com/cyberquince.dev" class="base_link" target="_blank">
               <i class="cq-icon wh-40 vk"></i>
             </a>
           </div>

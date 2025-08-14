@@ -68,7 +68,7 @@ export default {
     return {
       shownLangs: false,
       isScrolled: false,
-      burgerOpened: true,
+      burgerOpened: false,
     };
   },
   methods: {

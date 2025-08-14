@@ -17,6 +17,29 @@ body {
     color: inherit;
     text-decoration: none;
   }
+  &_title{
+    margin: 90px auto;
+  }
+  &_hr{
+    background: linear-gradient(to right, #8034D800, #1cc3eb, #8034D800);
+    height: 3px;
+    border: none;
+    border-radius: 20px;
+  }
+}
+.tourney{
+  font-size: 96px;
+  text-align: center;
+  color: $black;
+  background: $tourney-grad;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 6px transparent;
+  user-select: none;
+  @media screen {
+    @media (max-width: 500px) {
+      font-size: 19vw;
+    }
+  }
 }
 
 .content {
@@ -28,6 +51,12 @@ body {
   background: url('../../public/img/bg-coloured.png') repeat-y 50% 0% / cover,
               $black;
   background-blend-mode: screen;
+
+  @media screen {
+    @media (max-width: 500px) {
+      background-attachment: fixed;
+    }
+  }
 }
 
 .btn_submit{
@@ -75,20 +104,20 @@ body {
       font-size: 32px;
       top: calc(50% - 16px);
     }
-    &:before{
-      @media screen {
-        @media (max-width: 530px) {
-          left: 25px;
-        }
+  }
+  &:before{
+    @media screen {
+      @media (max-width: 530px) {
+        left: 25px;
       }
-      left: 32px;
     }
-    &:after{
-      right: 32px;
-      @media screen {
-        @media (max-width: 530px) {
-          right: 25px;
-        }
+    left: 32px;
+  }
+  &:after{
+    right: 32px;
+    @media screen {
+      @media (max-width: 530px) {
+        right: 25px;
       }
     }
   }
@@ -96,4 +125,30 @@ body {
 
 .aspect{
   color: $purple;
+}
+
+.input_wide{
+  outline: none;
+  border: none;
+  background: $card-bg;
+  border-radius: 12px;
+  color: $white;
+  caret-color: $white;
+  font-size: 16px;
+  font-family: $text-font;
+  font-size: 22px;
+  padding-left: 12px;
+  &::placeholder{
+    color: rgba($color: $white, $alpha: .6);
+  }
+  height: 40px;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button{
+    display: none;
+  }
+}
+textarea.input_wide{
+  min-height: 90px;
+  padding: 12px;
+  resize: none;
 }
