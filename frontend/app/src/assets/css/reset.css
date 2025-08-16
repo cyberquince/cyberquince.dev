@@ -46,3 +46,7 @@ html, div, p, body, article, input, button, textarea, select{
 	border: none;
 	background: none;
 }
+
+.pre{
+	white-space: pre-wrap;
+}

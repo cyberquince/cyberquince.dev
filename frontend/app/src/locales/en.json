@@ -50,23 +50,21 @@
   "contacts": {
     "title": "Let’s turn your idea into reality",
     "slogan": "We provide a free consultation, assess your project’s feasibility, and prepare an initial budget estimate",
-    "bullets": [
-      {
-        "index": 1,
+    "bullets": 
+    {
+      "about": {
         "title": "Tell us about your project",
         "description": "Share your project with us, and we’ll be in touch right away"
       },
-      {
-        "index": 2,
+      "desire": {
         "title": "Define your goal",
         "description": "Share your vision with us — we’ll craft the best solution to achieve it"
-      }, 
-      {
-        "index": 3,
+      },
+      "budget": {
         "title": "Set your budget",
         "description": "Based on your budget, we’ll propose the best solution"
       }
-    ],
+    },
     "form": {
       "title": "Please fill out the form",
       "about": "What we need to know",
@@ -82,60 +80,108 @@
     "cards": {
       "integration": {
         "title": "Data Integration",
-        "description": "We integrate your data from various sources into one unified system, streamlining workflows and ensuring data integrity"
+        "description": "We integrate your data from various sources into one unified system, streamlining workflows and ensuring data integrity",
+        "icon": "cog"
       },
       "architecture": {
         "title": "Data Warehouse Architecture",
-        "description": "Build robust, high-performance data warehouses with optimized schemas for fast processing and top-tier security"
+        "description": "Build robust, high-performance data warehouses with optimized schemas for fast processing and top-tier security",
+        "icon": "storage"
       },
-      "analitics": {
+      "analytics": {
         "title": "Data Analytics",
-        "description": "We perform deep data analysis and deliver clear reports and interactive dashboards that empower informed decision-making and reveal critical business trends"
+        "description": "We perform deep data analysis and deliver clear reports and interactive dashboards that empower informed decision-making and reveal critical business trends",
+        "icon": "chart-analytics"
       },
       "automatization": {
         "title": "Process Automation",
-        "description": "We streamline business processes through automation, cutting manual work and boosting efficiency"
+        "description": "We streamline business processes through automation, cutting manual work and boosting efficiency",
+        "icon": "flowchart"
       }
     }
   },
   "ux_page": {
     "title": "UX/UI Design",
     "slogan": "The Perfect Interface for Your App",
-    "icons": {
-      "determination": "Goal Setting",
-      "development": "Interface Design",
-      "visualize": "Visual Design",
-      "optimazation": "Interface Optimization"
+    "cards": {
+      "determination": {
+        "title": "Goal Setting",
+        "icon": "target"
+      },
+      "development": {
+        "title": "Interface Design",
+        "icon": "layers"
+      },
+      "visualize": {
+        "title": "Visual Design",
+        "icon": "grid"
+      },
+      "optimization": {
+        "title": "Interface Optimization",
+        "icon": "fullspeed"
+      }
     },
-    "cards": [
-      {"index": 1, "title": "Business Research", "description": "Immerse ourselves in your company’s unique context, analyze objectives, and understand your audience to build the perfect foundation."},
-      {"index": 2, "title": "Strategy Development", "description": "Craft the interface architecture, identify key elements, and define the overall visual style."},
-      {"index": 3, "title": "Design Creation", "description": "Develop a modern, clean, and responsive interface that perfectly reflects your brand."},
-      {"index": 4, "title": "Implementation & Integration", "description": "Deploy functionality using reliable technologies, adapting the site for any device."},
-      {"index": 5, "title": "Testing & Refinement", "description": "Checking loading speed, navigation logic, and usability, eliminating any shortcomings."},
-      {"index": 6, "title": "Launch & Growth", "description": "After the website launch, collaboration continues with user behavior analysis and regular solution updates."}
+    "steps": [
+      {
+        "title": "Business Research",
+        "description": "Immerse ourselves in your company’s unique context, analyze objectives, and understand your audience to build the perfect foundation."
+      },
+      {
+        "title": "Strategy Development",
+        "description": "Craft the interface architecture, identify key elements, and define the overall visual style."
+      },
+      {
+        "title": "Design Creation",
+        "description": "Develop a modern, clean, and responsive interface that perfectly reflects your brand."
+      },
+      {
+        "title": "Implementation & Integration",
+        "description": "Deploy functionality using reliable technologies, adapting the site for any device."
+      },
+      {
+        "title": "Testing & Refinement",
+        "description": "Checking loading speed, navigation logic, and usability, eliminating any shortcomings."
+      },
+      {
+        "title": "Launch & Growth",
+        "description": "After the website launch, collaboration continues with user behavior analysis and regular solution updates."
+      }
     ]
   },
   "seo_page": {
     "title": "SEO Optimization",
     "slogan": "Your Website at the Top",
-    "icons": {
-      "audit": "Technical Audit",
-      "semantics": "Keyword Research",
-      "on_page": "On-page Optimization",
-      "optimazation": "Off-page Optimization"
+    "cards": {
+      "audit": {
+        "title": "Technical Audit",
+        "icon": "chart-analytics"
+      },
+      "semantics": {
+        "title": "Keyword Research",
+        "icon": "pipeline"
+      },
+      "on_page": {
+        "title": "On-page Optimization",
+        "icon": "halfspeed"
+      },
+      "optimazation": {
+        "title": "Off-page Optimization",
+        "icon": "squared-link"
+      }
     },
-    "solutions": {
-      "basic": {
+    "solutions": [
+      {
         "title": "Basic",
         "options": [
           { "title": "Technical Audit", "description": "checking robots.txt, sitemap.xml, and basic SEO errors" },
           { "title": "Keyword Collection & Clustering", "description": "up to 20 keywords" },
           { "title": "On-page Optimization", "description": "title, meta description, H1 headings, and alt tags for 5 pages." },
           { "title": "Monthly Monitoring", "description": "google/RU rankings and a brief report" }
-        ]
+        ],
+        "price": "150",
+        "price_ru": "15000"
       },
-      "pro": {
+      {
         "title": "Advanced",
         "options": [
           { "title": "Basic Plan", "description": "All services from the Basic plan" },
@@ -143,9 +189,11 @@
           { "title": "Content Strategy", "description": "publications plus 4 SEO texts (1,000–1,500 characters each)" },
           { "title": "Link building", "description": "5 5 High-quality Backlinks on Authority Platforms" },
           { "title": "Detailed Analytics", "description": "google Analytics and Search Console setup, plus a monthly report with recommendations" }
-        ]
+        ],
+        "price": "350",
+        "price_ru": "35000"
       },
-      "corporate": {
+      {
         "title": "Enterprise",
         "options": [
           { "title": "Advanced Plan", "description": "All services from the Basic plan" },
@@ -154,9 +202,11 @@
           { "title": "Active Link Building", "description": "15 links from industry resources and media outlets" },
           { "title": "CRO Optimization", "description": "analysis of behavioral metrics and conversion recommendations" },
           { "title": "Weekly Meetings", "description": "real-time monitoring and reporting" }
-        ]
+        ],
+        "price": "750",
+        "price_ru": "75000"
       }
-    }
+    ]
   },
   "web_page": {
     "title": "Web Development",
@@ -165,34 +215,47 @@
     "cards": {
       "adaptive": {
         "title": "Responsive Design",
-        "description": "Ensures flawless display and usability across all devices and screen sizes, providing a consistent user experience"
+        "description": "Ensures flawless display and usability across all devices and screen sizes, providing a consistent user experience",
+        "icon": "monitor"
       },
       "stack": {
         "title": "Modern Tech Stack",
-        "description": "Utilizes the latest and most reliable technologies to ensure high performance, scalability, and long-term stability of your project"
+        "description": "Utilizes the latest and most reliable technologies to ensure high performance, scalability, and long-term stability of your project",
+        "icon": "embeded-code"
       },
       "api": {
         "title": "Interface Integration",
-        "description": "Seamlessly connect your interfaces with external services and systems to enhance functionality and user experience"
+        "description": "Seamlessly connect your interfaces with external services and systems to enhance functionality and user experience",
+        "icon": "api"
       },
       "speed": {
         "title": "Performance Optimization",
-        "description": "Improves website speed, responsiveness, and overall efficiency for a smoother user experience and better search rankings"
+        "description": "Improves website speed, responsiveness, and overall efficiency for a smoother user experience and better search rankings",
+        "icon": "fullspeed"
       }
     },
-    "solutions": {
-      "landing": {
+    "solutions": [
+      {
+        "image": "site-adaptive.png",
         "title": "Single-page Website",
-        "description": "Creating single-page landing websites that load quickly and work flawlessly on any device. Intuitive design and clear structure help visitors instantly find the information they need and submit inquiries in just a few clicks. Integrated contact forms, galleries, and maps provide convenience and drive higher conversions."
+        "description": "Creating single-page landing websites that load quickly and work flawlessly on any device. Intuitive design and clear structure help visitors instantly find the information they need and submit inquiries in just a few clicks. Integrated contact forms, galleries, and maps provide convenience and drive higher conversions.",
+        "price": "120",
+        "price_ru": "12000"
       },
-      "corporate": {
+      {
+        "image": "site-adaptive.png",
         "title": "Corporate Websites",
-        "description": "Developing multi-page corporate websites that enhance your company’s image and strengthen brand recognition. Convenient navigation and a well-structured layout (About Us, Services, Blog, Contact) help visitors quickly find the information they need. Integration of a content management system, news section, and subscription forms allows you to update the site yourself and stay connected with your audience. Optimized for fast loading and flawless display on all devices."
+        "description": "Developing multi-page corporate websites that enhance your company’s image and strengthen brand recognition. Convenient navigation and a well-structured layout (About Us, Services, Blog, Contact) help visitors quickly find the information they need. Integration of a content management system, news section, and subscription forms allows you to update the site yourself and stay connected with your audience. Optimized for fast loading and flawless display on all devices.",
+        "price": "320",
+        "price_ru": "32000"
       },
-      "cart": {
+      {
+        "image": "site-adaptive.png",
         "title": "E-commerce Website",
-        "description": "Creating modern online stores with product catalogs and user-friendly filters that help customers quickly find what they need. Designing intuitive shopping cart and checkout interfaces with support for all popular payment and delivery methods. Integrating product and promotion management systems, automating inventory tracking, and enabling real-time price updates. Fully responsive design optimized for fast loading on any device."
+        "description": "Creating modern online stores with product catalogs and user-friendly filters that help customers quickly find what they need. Designing intuitive shopping cart and checkout interfaces with support for all popular payment and delivery methods. Integrating product and promotion management systems, automating inventory tracking, and enabling real-time price updates. Fully responsive design optimized for fast loading on any device.",
+        "price": "720",
+        "price_ru": "72000"
       }
-    }
+    ]
   }
 }

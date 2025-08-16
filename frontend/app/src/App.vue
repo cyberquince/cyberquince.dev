@@ -13,6 +13,11 @@ export default {
   data() {
     return {};
   },
+  beforeMount() {
+    if (!this.$store.getters.countryCode) {
+      this.$store.dispatch('fetchCountry');
+    }
+  },
 };
 </script>
 <style lang="scss">

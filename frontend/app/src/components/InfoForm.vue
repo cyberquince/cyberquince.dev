@@ -5,19 +5,21 @@
     </div>
     <textarea name="about" id="about" class="input_wide"
       v-model="formInfo.about" :placeholder="$t('contacts.form.about')"></textarea>
-    <input type="text" placeholder="Имя" required class="input_wide" autocomplete="off"
-      v-model="formInfo.name">
-    <input type="number" inputmode="phone" placeholder="000-00-00" class="input_wide"
-      autocomplete="off" required v-model="formInfo.phone">
+    <input type="text" :placeholder="$t('contacts.form.name')" required class="input_wide"
+      autocomplete="off" v-model="formInfo.name">
+    <InputPhone />
     <input type="email" required autocomplete="off" placeholder="Email" class="input_wide"
       v-model="formInfo.email">
     <div class="form_row"></div>
-    <button type="submit" class="btn btn_submit">Связаться с нами</button>
+    <button type="submit" class="btn btn_submit">{{ $t('contacts.form.submit') }}</button>
   </div>
 </template>
 <script>
+import InputPhone from './InputPhone.vue';
+
 export default {
   name: 'InfoForm',
+  components: { InputPhone },
   props: {
     formTitle: {
       type: String,

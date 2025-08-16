@@ -12,6 +12,11 @@ module.exports = defineConfig({
         changeOrigin: true,
         pathRewrite: { '^/api': '' },
       },
+      '/flags': {
+        target: 'https://flagsapi.com/',
+        changeOrigin: true,
+        pathRewrite: { '^/flags': '' },
+      },
     },
   },
   configureWebpack: {

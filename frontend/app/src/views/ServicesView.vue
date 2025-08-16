@@ -1,6 +1,8 @@
 <template>
   <article class="services">
-    <div class="services_title base_title tourney">{{ $t('services.title') }}</div>
+    <div class="services_title base_title">
+      <span class="tourney">{{ $t('services.title') }}</span>
+    </div>
     <hr class="services_delimetr base_hr">
     <div class="services_routes">
       <div class="services_routes-item">
@@ -52,6 +54,10 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/variables.scss";
 .services{
+  &_title{
+    display: flex;
+    justify-content: center;
+  }
   &_routes{
     display: flex;
     justify-content: space-around;
