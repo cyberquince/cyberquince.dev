@@ -93,6 +93,7 @@ body {
     font-family: 'FontAwesome';
     color: $arrows-purple;
     font-weight: 600;
+    top: calc(50% - 13px);
   }
   &:before{
     content: '\f054';
@@ -173,4 +174,47 @@ textarea.input_wide{
   min-height: 90px;
   padding: 12px;
   resize: none;
+}
+.input_number{
+  height: 40px;
+  border-radius: 12px !important;
+  font-size: 22px;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  .vti{
+    &__dropdown{
+      background: $card-bg;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      &-list{
+        left: 0;
+        top: 38px;
+        border-radius: 12px;
+        background-color: $card-bg;
+        border-color: rgba($color: $dark-blue, $alpha: .6);
+      }
+      &-item{
+        &.highlighted{
+          background-color: rgba($color: $dark-blue, $alpha: .6) !important;
+        }
+      }
+    }
+    &__input{
+      caret-color: $white;
+      background: $card-bg;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      color: $white;
+      font-size: inherit;
+      font-family: $text-font;
+      &::placeholder{
+        color: rgba($color: $white, $alpha: .6);
+        font-family: $text-font;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.inv_input{
+  visibility: hidden;
 }

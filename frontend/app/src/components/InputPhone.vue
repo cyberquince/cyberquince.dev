@@ -1,7 +1,7 @@
 <template>
-  <div class="input_phone">
-    <transition name="slide">
-      <div class="country_info" v-if="countryFlag">
+  <div class="input_phone" :class="{ valid: isValid }">
+    <transition name="fade-slide">
+      <div class="input_phone-country" v-show="countryFlag">
         <span class="flag">{{ countryFlag }}</span>
         <span class="code">{{ dialCode }}</span>
       </div>
@@ -11,28 +11,22 @@
   </div>
 </template>
 <script>
-import { getCountryFromCountryCode } from 'country-codes-flags-phone-codes';
-import { AsYouType, isValidPhoneNumber, parsePhoneNumberFromString } from 'libphonenumber-js';
+import { MazInputPhoneNumber } from 'maz-ui';
 
 export default {
   name: 'InputPhone',
+  components: { MazInputPhoneNumber },
   data() {
     return {
       rawInput: '',
-      nationalNumber: '',
+      nationalNumber: null,
       countryCode: null,
       countryFlag: null,
+      dialCode: null,
       isValid: true,
     };
   },
   computed: {
-    userPhoneCountry() {
-      console.log(getCountryFromCountryCode(this.userPhone.country));
-      return getCountryFromCountryCode(this.userPhone.country).flag;
-    },
-    userPhoneCode() {
-      return getCountryFromCountryCode(this.userPhone.country).dialCode;
-    },
   },
   methods: {
     onInput(e) {
@@ -44,7 +38,7 @@ export default {
         this.dialCode = null;
       }
 
-      if (formatter.country) {
+      if (formatter.country && e.target.value && e.target.value !== '') {
         this.countryCode = formatter.country;
         this.dialCode = formatter.getNumber()?.countryCallingCode || '';
 
@@ -69,13 +63,53 @@ export default {
 .input_phone{
   display: flex;
   align-items: center;
-  &-number{
-    .input_wide{
-      border: 1px solid red;
-      &.valid{
-        border-color: transparent;
-      }
+  background: $card-bg;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: border-color .2s ease;
+  &-country{
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    padding: 0 5px;
+    .flag{
+      margin-right: 5px;
     }
   }
+  .input_wide{
+    width: 100% !important;
+    background: transparent;
+    &.valid{
+      border-color: transparent;
+    }
+  }
+}
+.fade-slide-enter-active,
+.fade-slide-leave-active{
+  transition: all .25s ease, transform .25s ease, margin-right .25s ease, width .25s ease,;
+}
+.fade-slide-enter-from{
+  opacity: 0;
+  transform: translateX(-12px);
+  width: 0;
+  margin-right: 0;
+}
+.fade-slide-enter-to{
+  opacity: 1;
+  transform: translateX(0);
+  width: auto;
+  margin-right: 8px;
+}
+.fade-slide-leave-from{
+  opacity: 1;
+  transform: translateX(0);
+  width: auto;
+  margin-right: 8px;
+}
+.fade-slide-leave-to{
+  opacity: 0;
+  transform: translateX(12px);
+  width: 0;
+  margin-right: 0;
 }
 </style>

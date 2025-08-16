@@ -21,6 +21,7 @@ export default createStore({
   actions: {
     changeLocale({ commit }, locale) {
       i18n.global.locale = locale;
+      localStorage.setItem('countryCode', locale);
       commit('setLocale', locale);
     },
     async fetchCountry({ commit }) {

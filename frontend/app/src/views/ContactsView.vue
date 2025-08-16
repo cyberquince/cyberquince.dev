@@ -81,6 +81,7 @@ export default {
     }
     &-form{
       width: calc(50% - 40px);
+      min-height: 450px;
       @media screen {
         @media (max-width: 1100px) {
           height: 450px;
@@ -125,7 +126,7 @@ export default {
         font-size: 64px;
         color: $purple;
         right: 22px;
-        top: calc(50% - 32px);
+        top: calc(50% - 40px);
         @media screen {
           @media (max-width: 580px) {
             font-size: 12vw;

@@ -69,6 +69,7 @@
       "title": "Please fill out the form",
       "about": "What we need to know",
       "name": "Name",
+      "number": "Enter phone number",
       "attach": "Attach File",
       "submit": "Submit" 
     }

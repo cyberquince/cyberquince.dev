@@ -37,3 +37,7 @@
   content: '\f0c9';
   font-weight: 600;
 }
+.file:before{
+  content: '\f15b';
+  font-weight: 600;
+}

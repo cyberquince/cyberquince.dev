@@ -14,9 +14,11 @@ export default {
     return {};
   },
   beforeMount() {
+    console.log(this.$store.getters.countryCode);
     if (!this.$store.getters.countryCode) {
       this.$store.dispatch('fetchCountry');
     }
+    this.$store.dispatch('changeLocale', this.$store.getters.countryCode);
   },
 };
 </script>
