@@ -3,7 +3,7 @@
     <div class="form_title" v-if="formTitle">
       <h3 class="title">{{ formTitle }}</h3>
     </div>
-    <form class="form_form" @submit.prevent="sendInfo">
+    <form class="form_form" @submit.prevent="sendInfo" ref="infoForm">
       <input type="text" :placeholder="$t('contacts.form.name')" required class="input_wide"
       autocomplete="off" v-model="formInfo.name">
       <VueTelInput v-model="formInfo.phone" class="input_number"
@@ -13,11 +13,12 @@
       <textarea name="about" id="about" class="input_wide"
         v-model="formInfo.about" :placeholder="$t('contacts.form.about')"></textarea>
       <div class="form_row">
-        <InputFile />
+        <InputFile v-model:file="formInfo.attachment" />
         <vue-turnstile v-model="token" site-key="0x4AAAAAABsUTRheKYnt7g0n" theme="dark"
-          :language="$store.getters.countryCode.toUpperCase()" class="captcha"/>
+          :language="turnstileLang" class="captcha"/>
       </div>
       <button type="submit" class="btn btn_submit">{{ $t('contacts.form.submit') }}</button>
+      <p class="pre" v-if="formResult">{{ $t(`contacts.form.${formResult}`) }}</p>
     </form>
   </div>
 </template>
@@ -43,7 +44,8 @@ export default {
         placeholder: this.$t('contacts.form.number'),
         required: true,
       },
-      token: null,
+      token: '',
+      formResult: null,
       formInfo: {
         about: null,
         name: null,
@@ -51,12 +53,44 @@ export default {
         email: null,
         attachment: null,
       },
-      captchaVerified: false,
     };
   },
   methods: {
     sendInfo() {
-      console.log(this.formInfo);
+      const formData = new FormData();
+      Object.entries(this.formInfo).forEach(([k, v]) => {
+        if (k !== 'attachment') {
+          formData.append(k, v);
+        }
+      });
+      if (this.formInfo.attachment && this.formInfo.attachment.length > 0) {
+        Array.from(this.formInfo.attachment).forEach((file) => {
+          formData.append('attachments[]', file);
+        });
+      }
+      fetch('/handlers/submit_form.php', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          this.formResult = data.status;
+          if (data.status === 'success') {
+            this.$refs.infoForm.reset();
+          }
+          setTimeout(() => {
+            this.formResult = null;
+          }, 5000);
+        })
+        .catch((err) => {
+          console.error('Error: ', err);
+          this.formResult = 'error';
+        });
+    },
+  },
+  computed: {
+    turnstileLang() {
+      return `${this.$store.getters.countryCode}-${this.$store.getters.countryCode}`;
     },
   },
   mounted() {},
@@ -66,16 +100,37 @@ export default {
 @import "@/assets/variables.scss";
 .form{
   height: 100%;
+  @media screen {
+    @media (max-width: 570px) {
+      height: 500px;
+    }
+  }
   &_row{
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     & > div{
       flex-basis: calc(50% - 20px);
+      @media screen {
+        @media (max-width: 570px) {
+          flex-basis: 100%;
+        }
+      }
     }
     .captcha{
       display: flex;
-      margin: 0;
-      border-radius: 12px;
+      align-items: center;
+      justify-content: center;
+       @media screen {
+        @media (max-width: 570px) {
+          // margin-bottom: 10px;
+        }
+      }
+    }
+    @media screen {
+      @media (max-width: 570px) {
+        flex-direction: column;
+      }
     }
   }
   &_form{

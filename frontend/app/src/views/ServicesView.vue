@@ -10,7 +10,7 @@
           <div class="services_routes-icon">
             <mIcon name="sourcecode" :w="128" :h="128" />
           </div>
-          <span v-html="$t('services.icons.web')"></span>
+          <span class="pre">{{ $t('services.icons.web') }}</span>
         </router-link>
       </div>
       <div class="services_routes-item">
@@ -18,7 +18,7 @@
           <div class="services_routes-icon">
             <mIcon name="pentool" :w="128" :h="128" />
           </div>
-          <span v-html="$t('services.icons.ux')"></span>
+          <span class="pre">{{ $t('services.icons.ux') }}</span>
         </router-link>
       </div>
       <div class="services_routes-item">
@@ -26,7 +26,7 @@
           <div class="services_routes-icon">
             <mIcon name="seoglass" :w="128" :h="128" />
           </div>
-          <span v-html="$t('services.icons.seo')"></span>
+          <span class="pre">{{ $t('services.icons.seo') }}</span>
         </router-link>
       </div>
       <div class="services_routes-item">
@@ -34,7 +34,7 @@
           <div class="services_routes-icon">
             <mIcon name="storage" :w="128" :h="128" />
           </div>
-          <span v-html="$t('services.icons.engineer')"></span>
+          <span class="pre">{{ $t('services.icons.engineer') }}</span>
         </router-link>
       </div>
     </div>

@@ -21,7 +21,9 @@
         <div class="solution_description" v-else>
           <p class="description pre">{{ s.description }}</p>
         </div>
-        <div class="solution_price">от <span class="price">{{ userPrice(s) }}</span></div>
+        <div class="solution_price">
+          от <span class="price">{{ rubValue ? s.price_ru : s.price }}{{ userPriceTag }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -40,11 +42,16 @@ export default {
   },
   data() {
     return {
+      rubCountries: ['BY', 'RU', 'KZ'],
     };
   },
-  methods: {
-    userPrice(val) {
-      return this.$store.getters.countryCode === 'ru' ? `${val.price_ru} р.` : `${val.price} €`;
+  methods: {},
+  computed: {
+    userPriceTag() {
+      return this.rubValue ? ' р.' : ' €';
+    },
+    rubValue() {
+      return this.rubCountries.includes(this.$store.getters.countryCode);
     },
   },
   mounted() {},

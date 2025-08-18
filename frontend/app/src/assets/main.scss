@@ -33,7 +33,6 @@ body {
     max-width: 100%;
     max-height: 100%;
     border-radius: inherit;
-    pointer-events: none;
   }
 }
 .tourney{
@@ -217,4 +216,5 @@ textarea.input_wide{
 }
 .inv_input{
   visibility: hidden;
+  position: absolute;
 }

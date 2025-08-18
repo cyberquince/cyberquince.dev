@@ -13,12 +13,18 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    manageTitle() {
+      const title = this.$t(`routes.${this.$route.name}`);
+      document.title = title;
+    },
+  },
   beforeMount() {
-    console.log(this.$store.getters.countryCode);
-    if (!this.$store.getters.countryCode) {
-      this.$store.dispatch('fetchCountry');
-    }
-    this.$store.dispatch('changeLocale', this.$store.getters.countryCode);
+    if (!this.$store.getters.countryCode) this.$store.dispatch('fetchCountry');
+    if (!this.$store.getters.locale) this.$store.dispatch('fetchLocale');
+  },
+  watch: {
+    $route: 'manageTitle',
   },
 };
 </script>

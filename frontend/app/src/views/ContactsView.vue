@@ -58,9 +58,8 @@ export default {
     }
   }
   &_slogan{
-    max-width: 784px;
     font-size: 24px;
-    margin: 0 auto;
+    text-align: center;
     @media screen {
       @media (max-width: 800px) {
         font-size: 2.6vw;
@@ -107,6 +106,7 @@ export default {
       max-width: 560px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 20px;
     }
     &-bullet{

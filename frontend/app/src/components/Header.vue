@@ -24,12 +24,12 @@
           </div>
         </div>
       </div>
-      <div class="header_nav-item">
+      <div class="header_nav-item" tabindex="-1">
         <router-link to="/" class="base_link">
           {{ $t('navbar.home') }}
         </router-link>
       </div>
-      <div class="header_nav-item">
+      <div class="header_nav-item" tabindex="-1">
         <router-link to="/services" class="base_link">
           {{ $t('navbar.services') }}
         </router-link>
@@ -39,12 +39,12 @@
           <img :src="pathToImage('logo.png')" class="base_image logo" alt="Logo">
         </router-link>
       </div>
-      <div class="header_nav-item">
+      <div class="header_nav-item" tabindex="-1">
         <router-link to="/contacts" class="base_link">
           {{ $t('navbar.contacts') }}
         </router-link>
       </div>
-      <div class="header_nav-item langs">
+      <div class="header_nav-item langs" tabindex="-1">
         <div class="header_languages-wrapper" @click="toggleLangs">
           <mIcon name="lang" :w="32" :h="32"/>
           <div class="header_languages-langs" v-show="shownLangs">

@@ -34,7 +34,7 @@
               <i class="cq-icon wh-40 facebook"></i>
             </a>
           </div>
-          <div class="social_telegram">
+          <div class="social_telegram aspect">
             <a href="//t.me/cyberquince.dev" class="base_link" target="_blank">
               <i class="cq-icon wh-40 telegram"></i>
             </a>
@@ -97,7 +97,7 @@ export default {
   background: $black;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 50px 30px 0px 30px;
+  padding: 30px 30px 0px 30px;
   box-sizing: border-box;
   @media screen {
     @media (max-width: 440px) {
@@ -106,7 +106,7 @@ export default {
   }
   &_info{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     @media screen {
       @media (max-width: 777px) {
@@ -123,9 +123,9 @@ export default {
       }
     }
     &-text{
-      font-size: 64px;
+      font-size: 58px;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
     &-button{
       @media screen {
@@ -140,8 +140,8 @@ export default {
       }
       .btn_submit{
         width: 100%;
-        height: 80px;
-        font-size: 36px;
+        height: 75px;
+        font-size: 32px;
         color: $white;
         &:before,
         &:after{
@@ -159,8 +159,13 @@ export default {
   }
   &_right{
     &-email{
-      font-size: 40px;
+      font-size: 32px;
       margin-bottom: 30px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      &:hover{
+        border-bottom: 2px solid $purple;
+      }
     }
     &-numbers{
       a{
@@ -173,7 +178,7 @@ export default {
           border-bottom: 2px solid $purple;
         }
       }
-      font-size: 40px;
+      font-size: 32px;
     }
     &-socials{
       width: 100%;

@@ -4,18 +4,17 @@ const webpack = require('webpack');
 module.exports = defineConfig({
   transpileDependencies: true,
   outputDir: '../dist',
-  publicPath:  process.env.NODE_ENV === "production" ? "/cyberquince.dev/" : "/",
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://dev.flask.home:41300/api',
+        target: 'https://cyberquince.dev/',
         changeOrigin: true,
         pathRewrite: { '^/api': '' },
       },
-      '/flags': {
-        target: 'https://flagsapi.com/',
+      '/ip': {
+        target: 'https://api.country.is/',
         changeOrigin: true,
-        pathRewrite: { '^/flags': '' },
+        pathRewrite: { '^/ip': '' },
       },
     },
   },

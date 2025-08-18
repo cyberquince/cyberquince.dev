@@ -1,4 +1,13 @@
 {
+  "routes": {
+    "home": "Home",
+    "services": "Services",
+    "web-development": "Web development",
+    "ux-design": "UX/UI design",
+    "seo": "SEO optimization",
+    "data-engineering": "Data-engineering",
+    "contacts": "Contacts"
+  },
   "navbar": {
     "home": "Home",
     "services": "Services",
@@ -40,10 +49,10 @@
   "services": {
     "title": "Choose a Service",
     "icons": {
-      "web": "Web<br>development",
-      "ux": "UX/UI<br>design",
-      "seo": "SEO<br>optimisation",
-      "engineer": "Data-<br>engineering"
+      "web": "Web\ndevelopment",
+      "ux": "UX/UI\ndesign",
+      "seo": "SEO\noptimisation",
+      "engineer": "Data\nengineering"
     },
     "calc": {}
   },
@@ -71,7 +80,9 @@
       "name": "Name",
       "number": "Enter phone number",
       "attach": "Attach File",
-      "submit": "Submit" 
+      "submit": "Submit",
+      "success": "Information has been send successfully. We will contact you in short time.",
+      "error": "Sending failed. Try again in few minutes." 
     }
   },
   "engineer_page": {
@@ -165,7 +176,7 @@
         "title": "On-page Optimization",
         "icon": "halfspeed"
       },
-      "optimazation": {
+      "optimization": {
         "title": "Off-page Optimization",
         "icon": "squared-link"
       }

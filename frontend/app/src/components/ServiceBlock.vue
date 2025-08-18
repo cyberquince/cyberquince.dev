@@ -188,6 +188,9 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      .m-icon{
+        cursor: default;
+      }
       &:before{
         background: linear-gradient(120deg, $light-blue, $purple) border-box;
         border-radius: 30px;
@@ -207,6 +210,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 136px;
     border-radius: 20px;
     border: 4px solid $purple;

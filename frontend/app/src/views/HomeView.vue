@@ -43,11 +43,13 @@ export default {
 @import "@/assets/variables.scss";
 .home{
   &_logoname{
+    user-select: none;
     text-align: center;
     display: flex;
     justify-content: center;
     font-family: $logo-font;
     font-size: 128px;
+    margin-bottom: 10px;
     @media screen {
       @media (max-width: 860px) {
         font-size: 14vw;

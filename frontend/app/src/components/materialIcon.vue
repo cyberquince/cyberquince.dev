@@ -2,7 +2,7 @@
   <div class="m-icon" ref="mainIcon" :width="w" :height="h" @click="$emit('click')">
     <svg :width="w" :height="h" xmlns="http://www.w3.org/2000/svg" class="icon"
       ref="svg">
-      <image :xlink:href="pathToIcons(name)" :width="w" :height="h" />
+      <image :xlink:href="`/icons/${name}.svg`" :width="w" :height="h" />
     </svg>
   </div>
 </template>
@@ -23,12 +23,7 @@ export default {
       required: true,
     },
   },
-  methods: {
-    pathToIcons(name) {
-      const prefix = process.env === 'production' ? '/cyberquince.dev/' : '/';
-      return `${prefix}icons/${name}.svg`;
-    },
-  },
+  methods: {},
 };
 </script>
 <style lang="scss">

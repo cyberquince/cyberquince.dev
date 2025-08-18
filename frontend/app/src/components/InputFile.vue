@@ -5,34 +5,43 @@
     ref="mainInputFile">
     <label for="inp_file">
       <div class="input_file-area">
-        <div class="input_file-placeholder" v-if="!file">
+        <div class="input_file-placeholder" v-if="!files">
           Прикрепить файл
         </div>
-        <div class="input_file-selected" v-else>{{ file.name }}</div>
+        <div class="input_file-selected" v-else>{{ fileNames}}</div>
       </div>
     </label>
-    <input type="file" class="inv_input" id="inp_file" @change="handleFile">
+    <input type="file" class="inv_input" id="inp_file" @change="handleFile"
+      :accept="acceptedFileTypes" multiple>
   </div>
 </template>
 <script>
 export default {
   name: 'InputFile',
+  model: {
+    prop: 'file',
+    event: 'update',
+  },
+  emits: ['update:file'],
   data() {
     return {
-      file: null,
+      files: null,
+      acceptedFileTypes: 'image/*,.pdf',
     };
   },
   methods: {
     handleFile(e) {
       const files = e.target.files;
       if (files.length > 0) {
-        this.file = files[0];
+        this.files = files;
+        this.$emit('update:file', files);
       }
     },
     handleDrop(e) {
       const files = e.dataTransfer.files;
       if (files.length > 0) {
-        this.file = files[0];
+        this.files = files;
+        this.$emit('update:file', files);
       }
     },
     activateDrag() {
@@ -42,12 +51,23 @@ export default {
       this.$refs.mainInputFile.classList.remove('active');
     },
   },
+  computed: {
+    fileNames() {
+      if (!this.files) return null;
+      const totalFiles = this.files.length;
+      const fileNames = Array.from(this.files).map((file) => file.name).join(',');
+      return `(${totalFiles}) ${fileNames}`;
+    },
+  },
   mounted() {},
 };
 </script>
 <style lang="scss" scoped>
 @import "@/assets/variables.scss";
 .input_file{
+  label{
+    cursor: pointer;
+  }
   &.active{
     .input_file-area{
       border-color: $blue;
@@ -78,6 +98,12 @@ export default {
       width: 20px;
       height: 20px;
     }
+  }
+  &-selected{
+    max-width: 230px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 </style>
