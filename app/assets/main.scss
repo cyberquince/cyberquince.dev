@@ -1,0 +1,234 @@
+@import "./css/reset.css";
+@import "./css/icons.css";
+
+body{
+  background: $black;
+  color: $white;
+  font-family: $text-font;
+  color: $white;
+  position: relative;
+  isolation: isolate;
+}
+
+.base{
+  &_link{
+    color: inherit;
+    text-decoration: none;
+  }
+  &_title{
+    margin: 90px auto;
+  }
+  &_hr{
+    background: linear-gradient(to right, #8034D800, #1cc3eb, #8034D800);
+    height: 3px;
+    border: none;
+    border-radius: 20px;
+  }
+  &_image{
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: inherit;
+  }
+}
+.tourney{
+  font-size: 96px;
+  display: inline-block;
+  color: $black;
+  background: $tourney-grad;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 6px transparent;
+  user-select: none;
+  text-align: center;
+  @media screen {
+    @media (max-width: 500px) {
+      font-size: 18.5vw;
+    }
+  }
+}
+.engineer_page .tourney{
+  @media screen {
+    @media (max-width: 542px) {
+      font-size: 16vw;
+      white-space: nowrap !important;
+    }
+  }
+}
+
+.content {
+  position: relative;
+  max-width: 1440px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding-top: 92px;
+  background: url('../../public/img/bg-coloured.png') repeat-y 50% 0% / cover,
+              $black;
+  background-blend-mode: screen;
+  &.middle{
+    padding-top: 0;
+  }
+  @media screen {
+    @media (max-width: 500px) {
+      background-attachment: fixed;
+    }
+  }
+}
+
+
+.btn_submit{
+  color: white;
+  border-radius: 12px;
+  background: $button-bg;
+  border: 2px solid #8B4DBD;
+  box-shadow: $button-shadow;
+  font-family: $text-font;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:before,
+  &:after{
+    position: absolute;
+    font-family: 'FontAwesome';
+    color: $arrows-purple;
+    font-weight: 600;
+    top: calc(50% - 13px);
+  }
+  &:before{
+    content: '\f054';
+  }
+  &:after{
+    content: '\f053';
+  }
+  &.big{
+    padding: 32px 92px;
+    font-size: 64px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen {
+      @media (max-width: 530px) {
+        font-size: 32px;
+        height: auto;
+        padding: 20px 56px;
+        line-height: 28px;
+      }
+    }
+    &:before,
+    &:after{
+      font-size: 32px;
+      top: calc(50% - 16px);
+      @media screen {
+        @media (max-width: 530px) {
+          top: calc(50% - 15px)
+        }
+      }
+    }
+  }
+  &:before{
+    left: 32px;
+    @media screen {
+      @media (max-width: 530px) {
+        left: 25px;
+      }
+    }
+  }
+  &:after{
+    right: 32px;
+    @media screen {
+      @media (max-width: 530px) {
+        right: 25px;
+      }
+    }
+  }
+}
+
+.aspect{
+  color: $purple;
+}
+.centered{
+  text-align: center;
+}
+
+.input_wide{
+  outline: none;
+  border: none;
+  background: $card-bg;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: $white;
+  caret-color: $white;
+  font-size: 16px;
+  font-family: $text-font;
+  font-size: 22px;
+  padding-left: 12px;
+  &::placeholder{
+    color: rgba($color: $white, $alpha: .6);
+  }
+  height: 40px;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button{
+    display: none;
+  }
+}
+textarea.input_wide{
+  min-height: 90px;
+  padding: 12px;
+  resize: none;
+}
+.input_number{
+  height: 40px;
+  border-radius: 12px !important;
+  font-size: 22px;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  .vti{
+    &__dropdown{
+      background: $card-bg;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      &-list{
+        left: 0;
+        top: 38px;
+        border-radius: 12px;
+        background-color: $card-bg;
+        border-color: rgba($color: $dark-blue, $alpha: .6);
+      }
+      &-item{
+        &.highlighted{
+          background-color: rgba($color: $dark-blue, $alpha: .6) !important;
+        }
+      }
+    }
+    &__input{
+      caret-color: $white;
+      background: $card-bg;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      color: $white;
+      font-size: inherit;
+      font-family: $text-font;
+      &::placeholder{
+        color: rgba($color: $white, $alpha: .6);
+        font-family: $text-font;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.inv_input{
+  visibility: hidden;
+  position: absolute;
+}
+
+.enourmous{
+  font-size: 215px;
+  line-height: 92px;
+  text-align: center;
+  span{
+    font-size: 92px;
+  }
+}
