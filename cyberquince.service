@@ -1,0 +1,12 @@
+[Unit]
+Description=CyberQuince Aiohttp Backend
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=on-success
+WorkingDirectory=/web/cyberquince.dev/www
+ExecStart=/web/cyberquince.dev/.venv/bin/python /web/cyberquince.dev/www/start.py
+
+[Install]
+WantedBy=multi-user.target
